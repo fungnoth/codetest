@@ -216,10 +216,12 @@ header, footer {
   }
   #video-carousel {
     --offset-width: calc((100% - var(--width-limit))/2);
-    max-width: calc(var(--width-limit) + var(--offset-width));
     position: relative;
-    margin-left: var(--offset-width);
     margin-top: 29px;
+    @media (min-width: 40em) {
+      max-width: calc(var(--width-limit) + var(--offset-width));
+      margin-left: var(--offset-width);
+    }
   }
   .section-title {
     font-size: 28px;

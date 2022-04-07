@@ -233,10 +233,14 @@ header, footer {
 }
 .section-movies #video-carousel {
   --offset-width: calc((100% - var(--width-limit))/2);
-  max-width: calc(var(--width-limit) + var(--offset-width));
   position: relative;
-  margin-left: var(--offset-width);
   margin-top: 29px;
+}
+@media (min-width: 40em) {
+  .section-movies #video-carousel {
+    max-width: calc(var(--width-limit) + var(--offset-width));
+    margin-left: var(--offset-width);
+  }
 }
 .section-movies .section-title {
   font-size: 28px;
