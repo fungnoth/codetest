@@ -205,12 +205,29 @@ header, footer {
 }
 
 .section-movies {
-  max-width: 1183px;
+  --width-limit: 1183px;
   padding-top: 40px;
   padding-bottom: 50px;
 }
+.section-movies .width-limit {
+  max-width: var(--width-limit);
+}
+.section-movies #video-carousel {
+  --offset-width: calc((100% - var(--width-limit))/2);
+  max-width: calc(var(--width-limit) + var(--offset-width));
+  position: relative;
+  margin-left: var(--offset-width);
+}
 .section-movies .section-title {
   font-size: 28px;
+}
+.section-movies .video-carousel-item {
+  width: 285px;
+  margin-right: 15px;
+}
+.section-movies .video-title {
+  font-size: 16px;
+  margin-top: 7px;
 }
 .section-movies .more-btn {
   height: 50px;

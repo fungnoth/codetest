@@ -74,13 +74,31 @@
         </div>
     </section>
     <section class="px bg-black text-white">
-        <div class="section-movies mx-auto">
-            <div class="grid-x">
+        <div class="section-movies">
+            <div class="grid-x width-limit mx-auto">
                 <div class="cell medium-auto">
                     <h4 class="section-title">New releases this month</h4>
                 </div>
                 <div class="cell medium-shrink">
                     <a href="#" class="border-rounded btn-white btn-normal more-btn" >See All</a>
+                </div>
+            </div>
+            <div id="video-carousel">
+                <div class="video-carousel-item">
+                    <img class="video-cover img-responsive" src="images/beauty.png" alt="Thumbnail of the movie">
+                    <h5 class="video-title">Beauty and the Beast</h5>
+                </div>
+                <div class="video-carousel-item">
+                    <img class="video-cover img-responsive" src="images/alice.png"  alt="Thumbnail of the movie">
+                    <h5 class="video-title">Alice in Wonderland</h5>
+                </div>
+                <div class="video-carousel-item">
+                    <img class="video-cover img-responsive" src="images/the-lion-kings.png"  alt="Thumbnail of the movie">
+                    <h5 class="video-title">The Lion King</h5>
+                </div>
+                <div class="video-carousel-item">
+                    <img class="video-cover img-responsive" src="images/incredibles2.png"  alt="Thumbnail of the movie">
+                    <h5 class="video-title">The Incredibles 2</h5>
                 </div>
             </div>
 
@@ -94,8 +112,20 @@
                 infinite: true,
                 speed: 500,
                 fade: true,
-                cssEase: 'linear'
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 10000,
             });
+
+            $("#video-carousel").slick({
+                // slidesToShow: 3,
+                slidesToScroll: 1,
+                variableWidth: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+            });
+
         });
     </script>
 </body>
