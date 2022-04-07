@@ -36,8 +36,8 @@
                 <div class="title-bar-title" style="font-size: 16px">Menu</div>
             </a>
         </div>
-        <nav class="cell medium-shrink" id="main-nav">
-            <ul class="vertical medium-horizontal menu text-all-caps black-menu">
+        <nav class="cell medium-auto grid-x" id="main-nav">
+            <ul class="cell medium-auto vertical medium-horizontal menu text-all-caps black-menu">
                 <li><a href="#0"><span>TV</span></a></li>
                 <li><a href="#0"><span>Movies</span></a></li>
                 <li><a href="#0"><span>Store</span></a></li>
@@ -47,13 +47,11 @@
                 <li><a href="#0"><span>Holidays</span></a></li>
                 <li><a href="#0"><span>Disneylife</span></a></li>
             </ul>
-        </nav>
-        <div class="cell medium-shrink ml-auto">
-            <a href="#" class="border-rounded btn-normal login-btn text-center w-100 text-all-caps transition-fast ">
+            <a href="#" class="cell medium-shrink border-rounded btn-normal login-btn text-center w-100 text-all-caps transition-fast ml-auto d-block">
                 <img src="images/login-icon.png">
                 <span>Login / Register</span>
             </a>
-        </div>
+        </nav>
     </header>
     <section class="slick text-white bg-black" id="hero-banner">
         <div class="">
@@ -66,9 +64,16 @@
             </div>
         </div>
         <div>
-            <div class="img-bg-cover  hero-banner-item d-flex" style="background-image: url('images/starwars-bg.png')">
+            <div class="img-bg-cover  hero-banner-item d-flex" style="background-image: url('images/starwars-trailer-img.png')">
                 <div class="text-center">
-    <!--                <img src="images/starwars-logo.png" class="img-responsive mx-auto py"/>-->
+                    <p class="banner-text-main py">Available Now to Rent or Buy</p>
+                    <a class="btn-outline text-white border-rounded  btn-large mx-auto text-all-caps">Purchase</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="img-bg-cover  hero-banner-item d-flex" style="background-image: url('images/beauty.png')">
+                <div class="text-center">
                     <p class="banner-text-main py">Available Now to Rent or Buy</p>
                     <a class="btn-outline text-white border-rounded  btn-large mx-auto text-all-caps">Purchase</a>
                 </div>
@@ -230,6 +235,7 @@
 
         </nav>
     </footer>
+    <div class="copyright-block bg-white text-center">© Copyright 2020 - All rights reserved Disney</div>
 
     <script>
         $(function() {
