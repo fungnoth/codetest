@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Disney</title>
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
@@ -23,10 +26,17 @@
 </head>
 <body>
     <header class="grid-x text-white" id="header">
-        <div class="cell medium-shrink">
+        <div class="cell shrink">
             <img src="images/logo.png" class="img-responsive" id="logo-img" alt="disney-logo-white">
         </div>
-        <nav class="cell medium-shrink">
+        <div class="title-bar cell auto" data-responsive-toggle="main-nav" data-hide-for="medium" style="justify-content: flex-end">
+            <a href="javascript:void(0)" data-toggle="main-nav">
+
+                <button class="menu-icon" type="button" ></button>
+                <div class="title-bar-title" style="font-size: 16px">Menu</div>
+            </a>
+        </div>
+        <nav class="cell medium-shrink" id="main-nav">
             <ul class="vertical medium-horizontal menu text-all-caps black-menu">
                 <li><a href="#0"><span>TV</span></a></li>
                 <li><a href="#0"><span>Movies</span></a></li>
@@ -39,7 +49,7 @@
             </ul>
         </nav>
         <div class="cell medium-shrink ml-auto">
-            <a href="#" class="border-rounded btn-normal login-btn text-center w-100 d-flex text-all-caps transition-fast ">
+            <a href="#" class="border-rounded btn-normal login-btn text-center w-100 text-all-caps transition-fast ">
                 <img src="images/login-icon.png">
                 <span>Login / Register</span>
             </a>
@@ -51,7 +61,7 @@
                 <div class="text-center">
                     <img src="images/starwars-logo.png" class="img-responsive mx-auto py" id="banner-star-wars-logo"/>
                     <p class="banner-text-main py">Available Now to Rent or Buy</p>
-                    <a class="btn-outline text-white border-rounded d-flex btn-large mx-auto text-all-caps transition-fast">Purchase</a>
+                    <a class="btn-outline text-white border-rounded btn-large mx-auto text-all-caps transition-fast">Purchase</a>
                 </div>
             </div>
         </div>
@@ -60,7 +70,7 @@
                 <div class="text-center">
     <!--                <img src="images/starwars-logo.png" class="img-responsive mx-auto py"/>-->
                     <p class="banner-text-main py">Available Now to Rent or Buy</p>
-                    <a class="btn-outline text-white border-rounded d-flex btn-large mx-auto text-all-caps">Purchase</a>
+                    <a class="btn-outline text-white border-rounded  btn-large mx-auto text-all-caps">Purchase</a>
                 </div>
             </div>
         </div>
@@ -68,7 +78,7 @@
     <section class="px bg-white text-center ">
         <div class="section-normal mx-auto">
             <h3 class="section-title">Covid-19 Update</h3>
-            <p>
+            <p class="section-info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div>
@@ -80,33 +90,150 @@
                     <h4 class="section-title">New releases this month</h4>
                 </div>
                 <div class="cell medium-shrink">
-                    <a href="#" class="border-rounded btn-white btn-normal more-btn" >See All</a>
+                    <a href="#" class="border-rounded btn-white btn-normal more-btn transition-fast" >
+                        <span>See All</span>
+                        <img class="right-arrow transition-fast" src="images/right-arrow.png">
+                    </a>
                 </div>
             </div>
             <div id="video-carousel">
-                <div class="video-carousel-item">
+                <a class="video-carousel-item" href="#">
                     <img class="video-cover img-responsive" src="images/beauty.png" alt="Thumbnail of the movie">
                     <h5 class="video-title">Beauty and the Beast</h5>
-                </div>
-                <div class="video-carousel-item">
+                </a>
+                <a class="video-carousel-item" href="#">
                     <img class="video-cover img-responsive" src="images/alice.png"  alt="Thumbnail of the movie">
                     <h5 class="video-title">Alice in Wonderland</h5>
-                </div>
-                <div class="video-carousel-item">
+                </a>
+                <a class="video-carousel-item" href="#">
                     <img class="video-cover img-responsive" src="images/the-lion-kings.png"  alt="Thumbnail of the movie">
                     <h5 class="video-title">The Lion King</h5>
-                </div>
-                <div class="video-carousel-item">
+                </a>
+                <a class="video-carousel-item" href="#">
                     <img class="video-cover img-responsive" src="images/incredibles2.png"  alt="Thumbnail of the movie">
                     <h5 class="video-title">The Incredibles 2</h5>
-                </div>
+                </a>
             </div>
 
         </div>
     </section>
+    <section class="bg-white grid-x section-trailer" >
+        <div id="trailer-img" class="cell large-6 img-bg-cover" style="background-image: url(images/starwars-trailer-img.png)"></div>
+        <div class="trailer-info cell large-6 d-flex">
+            <div class="mx-auto width-limit">
+                <h3 class="section-title">New</h3>
+                <p class="section-info">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <a href="#" class="bg-black border-rounded btn-normal btn-black transition-fast more-btn">
+                    <span>Read more</span>
+                    <img class="right-arrow transition-fast" src="images/right-arrow.png">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-photos grid-x px">
+        <a href="#" class="d-block cell img-bg-cover transition-default" style="background-image: url(images/disney-photo.png)" title="Photo taken in Walt Disney World"></a>
+        <a href="#" class="d-block cell img-bg-cover transition-default" style="background-image: url(images/drawing.png)" title="Photo of someone drawing"></a>
+        <a href="#" class="d-block cell img-bg-cover transition-default" style="background-image: url(images/frozen.png)" title="Frozen 2"></a>
+        <a href="#" class="d-block cell img-bg-cover transition-default" style="background-image: url(images/mic.png)" title="Photo of Mickey holding a mic"></a>
+    </section>
+    <section class="section-normal section-contact mx-auto text-center">
+        <form class="contact-form ">
+            <h3 class="section-title ">Contact Us</h3>
+            <div class="grid-x">
+                <div class="cell medium-6">
+                    <input class="form-input"  name="name" placeholder="Name*" required/>
+
+                </div>
+                <div class="cell medium-6">
+                    <input class="form-input" name="surname" placeholder="Surname*" required/>
+                </div>
+                <div class="cell medium-6">
+                    <input class="form-input" name="phone" placeholder="Contact number*" required/>
+                </div>
+                <div class="cell medium-6">
+                    <input class="form-input" type="email" name="phone" placeholder="Email address*" required/>
+                </div>
+                <div class="cell">
+                    <textarea class="form-input" name="message" placeholder="Leave your message here*" required></textarea>
+                </div>
+                <div class="cell text-center">
+                    <a href="#" class="btn-black border-rounded btn-normal submit-btn">
+                        <span>Submit</span>
+                        <img class="right-arrow transition-fast" src="images/right-arrow.png">
+                    </a>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer id="footer" class="bg-black text-white">
+        <nav class="section-normal grid-x width-limit mx-auto">
+            <div class="cell medium-4 large-auto">
+                <a href="#"><h5>Movies</h5></a>
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Excepteur sint occaecat<br/>Cupidatat non proident</a></li>
+                    <li><a href="#">Sunt in</a></li>
+                    <li><a href="#">Culpa qui officia deserunt</a></li>
+                    <li><a href="#">Mollit anim id est laborum</a></li>
+                </ul>
+            </div>
+            <div class="cell medium-4 large-auto">
+                <a href="#"><h5>Series</h5></a>
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Excepteur sint occaecat<br/>Cupidatat non proident</a></li>
+                    <li><a href="#">Sunt in</a></li>
+                    <li><a href="#">Mollit anim id est laborum</a></li>
+                </ul>
+            </div>
+            <div class="cell medium-4 large-auto">
+                <a href="#"><h5>DisneyLife</h5></a>
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Excepteur sint occaecat<br/>Cupidatat non proident</a></li>
+                    <li><a href="#">Culpa qui officia deserunt</a></li>
+                    <li><a href="#">Mollit anim id est laborum</a></li>
+                </ul>
+            </div>
+            <div class="cell medium-4 large-auto">
+                <a href="#"><h5>Holiday</h5></a>
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Excepteur sint occaecat<br/>Cupidatat non proident</a></li>
+                    <li><a href="#">Sunt in</a></li>
+                    <li><a href="#">Culpa qui officia deserunt</a></li>
+                    <li><a href="#">Mollit anim id est laborum</a></li>
+                </ul>
+            </div>
+            <div class="cell medium-4 large-auto">
+                <h5>Company</h5>
+                <ul>
+                    <li><span>0206 222 3364</span></li>
+                    <li><a href="mailto:hello@disneylife.com">hello@disneylife.com</a></li>
+                    <li><a href="mailto:press@disney.com">press@disney.com</a></li>
+                </ul>
+                <a href="#" class="social-icons" title="Follow Disney on Instagram">
+                    <img src="images/instagram.png">
+                </a>
+                <a href="#" class="social-icons" title="Follow Disney on Spotify">
+                    <img src="images/spotify.png">
+                </a>
+                <a href="#" class="social-icons" title="Follow Disney on Twitter">
+                    <img src="images/twitter.png">
+                </a>
+
+            </div>
+
+        </nav>
+    </footer>
 
     <script>
         $(function() {
+            $(document).foundation();
             $('#hero-banner').slick({
                 dots: true,
                 infinite: true,

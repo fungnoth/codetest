@@ -107,9 +107,10 @@ header, footer {
   width: 220px;
   max-width: 100%;
   height: 60px;
-  align-items: center;
-  justify-content: center;
+  padding: 13px;
+  text-align: center;
   font-size: 20px;
+  display: inline-block;
 }
 
 .btn-white {
@@ -123,13 +124,23 @@ header, footer {
   background-color: black;
 }
 
+.btn-black {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+.btn-black:hover {
+  color: black;
+  border-color: black;
+  background-color: white;
+}
+
 .btn-normal {
   padding: 10px;
   height: 40px;
   width: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  display: inline-block;
+  text-align: center;
 }
 @media screen and (min-width: 40em) {
   .btn-normal {
@@ -140,6 +151,12 @@ header, footer {
 .login-btn {
   background-color: #FF704B;
   color: white;
+  margin-top: 15px;
+}
+@media screen and (min-width: 40em) {
+  .login-btn {
+    margin-top: 0;
+  }
 }
 .login-btn > img {
   width: 20px;
@@ -196,10 +213,12 @@ header, footer {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-.section-normal .section-title {
+
+.section-title {
   font-size: 32px;
 }
-.section-normal p {
+
+.section-info {
   font-size: 18px;
   line-height: 30px;
 }
@@ -217,6 +236,7 @@ header, footer {
   max-width: calc(var(--width-limit) + var(--offset-width));
   position: relative;
   margin-left: var(--offset-width);
+  margin-top: 29px;
 }
 .section-movies .section-title {
   font-size: 28px;
@@ -225,14 +245,24 @@ header, footer {
   width: 285px;
   margin-right: 15px;
 }
+.section-movies .video-carousel-itema {
+  display: block;
+}
 .section-movies .video-title {
   font-size: 16px;
   margin-top: 7px;
+  color: white;
 }
 .section-movies .more-btn {
   height: 50px;
   border: 2px solid white;
   font-size: 18px;
+}
+.section-movies .more-btn .right-arrow {
+  filter: brightness(0);
+}
+.section-movies .more-btn:hover .right-arrow {
+  filter: brightness(1);
 }
 
 .slick-dots {
@@ -259,6 +289,116 @@ header, footer {
 .slick-dots li.slick-active button:before {
   color: white;
   opacity: 1;
+}
+
+.section-trailer #trailer-img {
+  height: 400px;
+}
+@media screen and (min-width: 40em) {
+  .section-trailer #trailer-img {
+    height: 750px;
+  }
+}
+.section-trailer .section-title {
+  margin-top: 30px;
+  font-size: 32px;
+}
+.section-trailer .trailer-info {
+  align-items: center;
+  justify-content: center;
+}
+.section-trailer .width-limit {
+  max-width: 512px;
+}
+.section-trailer .more-btn {
+  height: 50px;
+  width: 198px;
+  font-size: 18px;
+}
+.section-trailer .more-btn:hover .right-arrow {
+  filter: brightness(0);
+}
+
+.right-arrow {
+  width: 20px;
+  margin-left: 8px;
+  vertical-align: baseline;
+}
+
+.section-photos {
+  width: 100%;
+  justify-content: center;
+  margin: 60px 0;
+}
+.section-photos > a {
+  width: 345px;
+  height: 345px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.section-photos > a:hover {
+  transform: scale(1.03);
+}
+.section-photos > a:last-child {
+  margin-right: 0;
+}
+
+.section-contact {
+  max-width: 947px;
+}
+.section-contact h3.section-title {
+  margin: 30px 0;
+}
+.section-contact .submit-btn {
+  height: 50px;
+  font-size: 18px;
+}
+.section-contact .cell {
+  padding: 10px;
+}
+.section-contact .form-input {
+  height: 60px;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #333333;
+  margin-bottom: 0;
+  padding: 18px 20px;
+  font-size: 18px;
+}
+.section-contact .form-input::placeholder {
+  color: #666;
+}
+.section-contact textarea.form-input {
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+footer#footer .width-limit {
+  --width-limit: 1183px;
+  max-width: var(--width-limit);
+}
+footer#footer h5 {
+  font-size: 20px;
+}
+footer#footer nav a {
+  color: white;
+  display: inline-block;
+}
+footer#footer nav ul {
+  margin-left: 0;
+  font-size: 14px;
+  list-style: none;
+}
+footer#footer nav ul li a, footer#footer nav ul li span {
+  color: #CCC;
+  margin: 2px 0;
+}
+footer#footer nav ul li a:hover {
+  color: #FFF;
+}
+footer#footer .social-icons {
+  width: 26px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
